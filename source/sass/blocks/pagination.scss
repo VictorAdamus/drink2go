@@ -1,0 +1,129 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pagination__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 2;
+}
+
+.pagination__item {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $base-white;
+  border-radius: 4px;
+  color: $base-primary;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-lighter;
+    color: $base-white;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+    color: $base-white;
+  }
+
+  &--active {
+    color: $base-black;
+    font-weight: 600;
+    background-color: transparent;
+  }
+
+  &--disabled {
+    background-color: $light-grey;
+  }
+}
+
+.pagination__button {
+  width: 40px;
+  padding: 0;
+  height: 40px;
+  border: none;
+  background-color: $base-white;
+  border-radius: 4px;
+  cursor: pointer;
+  color: $base-primary;
+
+  &:hover {
+    background-color: $primary-lighter;
+    color: $base-white;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+    color: $base-white;
+  }
+
+  &--min {
+    margin-right: 20px;
+  }
+
+  &--max {
+    margin-left: 20px;
+  }
+}
+
+.button__title {
+  display: none;
+}
+
+.arrow {
+  border: solid $base-primary;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+
+  &--left {
+    transform: rotate(135deg);
+  }
+
+  &--right {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (min-width: $tablet) {
+  .pagination {
+    justify-content: flex-end;
+  }
+  .pagination__list {
+    flex-grow: 0;
+  }
+
+  .pagination__button {
+    width: 90px;
+
+    &--min {
+      margin: 0;
+    }
+
+    &--max {
+      margin: 0;
+    }
+  }
+  .arrow {
+    display: none;
+  }
+
+  .button__title {
+    display: inline-block;
+    font-family: "Montserrat", "Tahoma", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+}

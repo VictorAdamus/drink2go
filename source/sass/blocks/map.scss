@@ -1,0 +1,17 @@
+.map__container {
+  background-color: $bg-light-grey;
+  margin: 0 auto;
+  height: 420px;
+}
+
+@media (min-width: $tablet) {
+  .map__container {
+    height: 480px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .map__container {
+    height: 540px;
+  }
+}

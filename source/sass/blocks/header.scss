@@ -1,0 +1,135 @@
+.header {
+  background-color: $base-white;
+}
+.header__wrapper {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.header__container {
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 42px;
+}
+
+.header__menu-button {
+  background-color: $base-white;
+  border: none;
+  cursor: pointer;
+}
+
+.header__logo-link {
+  display: block;
+  background-image: url("../../img/logo-header-mobile.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 36px;
+}
+
+.header__logo-title {
+  display: none;
+}
+
+.header__navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__item {
+  padding: 22px;
+  cursor: pointer;
+
+  &--title {
+    display: none;
+  }
+
+  &:active {
+    background-color: $base-secondary;
+  }
+
+  &--image {
+    display: block;
+    fill: $base-black;
+
+    &:hover {
+      fill: $base-primary;
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .header__wrapper {
+    max-width: 1200px;
+  }
+
+  .header__container {
+    margin-right: 0;
+  }
+
+  .header__logo-link {
+    background-image: url("../../img/logo-header-tablet.svg");
+    width: 82px;
+  }
+
+  .navbar__item {
+    padding: 32px 22px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .header__wrapper {
+    max-width: 1600px;
+  }
+
+  .header__container {
+    padding: 0 40px;
+  }
+
+  .header__logo-link {
+    background-image: url("../../img/logo-header-desktop.svg");
+    width: 170px;
+    margin-right: 20px;
+  }
+
+  .header__logo--wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__logo-title {
+    display: inline-block;
+    max-width: 130px;
+    font-size: 12px;
+    line-height: 16px;
+    color: $base-black;
+  }
+
+  .navbar__item {
+    padding: 32px 20px;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: $base-primary;
+    }
+
+    &--title {
+      order: 2;
+      display: inline-block;
+      margin-left: 8px;
+    }
+
+    &--user {
+      margin-right: 20px;
+    }
+  }
+
+  .navbar__item:hover .navbar__item--image {
+    fill: $base-primary;
+  }
+}
