@@ -2,7 +2,7 @@
   "name": "drink2go",
   "private": true,
   "description": "Личный проект «drink2go» от HTML-Academy",
-  "homepage": "https://victoradamus.github.io/",
+  "homepage": "https://victoradamus.github.io/drink2go",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "^10.4.0",
@@ -30,7 +30,8 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "lint": "npm run editorconfig && npm run stylelint",
     "build": "gulp styles",
-    "start": "gulp"
+    "start": "gulp",
+    "deploy": "gh-pages -d build"
 
   },
   "browserslist": [
